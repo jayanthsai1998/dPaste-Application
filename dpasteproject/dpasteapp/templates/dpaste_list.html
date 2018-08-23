@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+<html>
+    <head>
+        {% load static %}
+        <link rel="stylesheet" type="text/css" href= '{% static "css/css_dpaste_list.css" %}' />
+        <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id = "bootstrap-css">
+        <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+        <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    </head>
+
+    <body>
+
+        {% block content %}
+        <div class = "container">
+
+                       <div class="panel  panel-primary">
+                       <div class="panel-heading" style="padding:5px;">
+                            <div class="row">
+                            <div class="col col-xs-5 text-center">
+                                <h1 class="panel-title">dPASTE PRO REPOSITORIES</h1>
+                            </div>
+                            </div>
+                        </div>
+                       </div>
+
+        <table class="table table-striped custab" width="100%">
+        <thead>
+        <a href = '{% url "add_dpastelist" %}' class="btn btn-success btn-xs pull-right"><h4><b>+</b> Add New Repository</h4></a>
+        <tr>
+            <th><h2>Project Name</h2></th>
+            <th><h2>No. of Snippets</h2></th>
+            <th><h2>Created On</h2></th>
+            <th class="text-center"><h2>Action</h2></th>
+        </tr>
+        </thead>
+            {% for dpastelist in dpastelists %}
+            <tr>
+                <td><h3>
+                    <a href = '{% url "dpastelistitem_list" dpastelist.list.id %}'>
+                    {{ dpastelist.list.project_name }}
+                    </a></h3>
+                </td>
+                <td><h3>{{ dpastelist.count }}</h3></td>
+                <td><h3>{{ dpastelist.list.date_created }}</h3></td>
+                <td class="text-center">
+                    <a class='btn btn-info btn-xs' href='{% url "edit_dpastelist" dpastelist.list.id %}'><span class = "glyphicon glyphicon-edit"></span> Edit</a>
+                    <a href = '{% url "delete_dpastelist" dpastelist.list.id %}' class="btn btn-danger btn-xs"><span class = "glyphicon glyphicon-remove"></span> Delete</a>
+                </td>
+            </tr>
+            {% endfor %}
+            </table>
+            </div>
+    {% endblock %}
+    </body>
+</html>

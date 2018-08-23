@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container">
+    <form method="post">
+        {% csrf_token %}
+        <!--<h1>Are you sure you want to delete ?{% if dpastelist %}{{ dpastelist.name }}{% else %}"{{ dpastelistitem.content }}"{% endif %}</h1>-->
+        <h1>Are you sure you want to delete ?</h1>
+        <input type="submit" class="btn btn-danger" value="Delete">
+    </form>
+</div>
+{% endblock %}

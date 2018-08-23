@@ -1,0 +1,17 @@
+body {
+    background: linear-gradient(90deg, white,rgb(0, 255, 191));
+    color:white;
+    margin:0;
+    padding:0;
+    }
+.custab{
+    border: 1px solid #ccc;
+    padding: 5px;
+    margin: 5% 0;
+    box-shadow: 3px 3px 2px #ccc;
+    transition: 0.5s;
+    }
+.custab:hover{
+    box-shadow: 3px 3px 0px transparent;
+    transition: 0.5s;
+    }

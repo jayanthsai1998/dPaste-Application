@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+<html>
+    <head>
+        <title>Features</title>
+    </head>
+
+    <body>
+    {% block content %}
+            <center>
+            <div>
+               <p>
+                   <img src="https://static-fastly.hackerearth.com/static/hackerearth/images/homepage_2/min/homepageGraphics-1.png" class="mobile-image"  width="550px" height="520px" style="float:right; margin-right: 30px"/>
+                   <strong style="font-size:20px;text-align:left;margin-left: 100px">
+                    <ul style="list-style-type: square;">
+                        <li>
+                            Here we can save code repositories
+                            and can set an expiry date for the repository we've created
+                            which is a feature of dPaste website.
+                        </li>
+                        <li>
+                            In the home page, we can create new code Repositories
+                            by clicking on the "Add Repository" button.
+                        </li>
+                        <li>
+                            When our Repository has created, by clicking on the Repository
+                            name takes us into the respective repository's snippets page.
+                        </li>
+                        <li>
+                            Here we can add as many snippets as we needed to
+                            include in that project by clicking on the "Add Snippets" button.
+                        </li>
+                        <li>
+                            Code snippets can been saved according to the programming
+                            syntax language by which we used.
+                        </li>
+                        <li>
+                            To support version control we can edit the created files
+                            and can change the version of the respective snippets.
+                        </li>
+                        <li>
+                            Also we can delete the repositories and
+                            snippets we've created at any time.
+                        </li>
+                    </ul>
+                    </strong>
+               <p>
+            </div>
+            </center>
+    {% endblock %}
+    </body>
+</html>

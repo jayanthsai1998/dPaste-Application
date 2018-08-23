@@ -1,0 +1,68 @@
+{% load staticfiles %}
+<!--<!DOCTYPE html>-->
+<html>
+<head>
+  <title>Login</title>
+  {% load static %}
+    <style>
+        body {
+            background-image: url('{% static "images/black_slate.jpg" %}');
+        }
+    </style>
+  <link rel="stylesheet" type="text/css" href= '{% static "css/dpaste.css" %}' />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div class="wrapper">
+
+
+  <div class="login is-active">
+      <!-- <div class="profile"><i class="fa fa-camera fa-2x"></i></div> -->
+      <form method="POST">
+      {% csrf_token %}
+        <div class="form-element">
+            <span><i class="fa fa-user-circle"></i></span><input type="text" placeholder="User Name" name="username" />
+        </div>
+        <div class="form-element">
+            <span><i class="fa fa-lock"></i></span><input type="password" placeholder=" Password" name="password"/>
+        </div>
+          <button class="btn-login">login</button>
+      </form>
+  </div>
+
+  <div class="register down">
+      <form method="POST" action="{% url 'signup' %}">
+      {% csrf_token %}
+        <div class="form-element">
+            <span><i class="fa fa-user"></i></span><input type="text" placeholder="First Name" name="first_name" />
+        </div>
+        <div class="form-element">
+            <span><i class="fa fa-user"></i></span><input type="text" placeholder="Last Name" name = "last_name" />
+        </div>
+        <div class="form-element">
+            <span><i class="fa fa-envelope"></i></span><input type="email" placeholder="E-mail address" />
+        </div>
+        <div class="form-element">
+            <span><i class="fa fa-user-circle"></i></span><input type="text" placeholder="User Name" name = "username" />
+        </div>
+        <div class="form-element">
+            <span><i class="fa fa-lock"></i></span><input type="password" placeholder="Password" name = "password" />
+        </div>
+        <button class="btn-register">register</button>
+      </form>
+  </div>
+
+  <div class="login-view-toggle">
+    <div class="sign-up-toggle is-active" style="margin-bottom: 100px">Don't have an account? <a href="#">Sign Up</a></div>
+    <div class="login-toggle">Already have an account? <a href="#">Login</a></div>
+  </div>
+</div>
+{% load static %}
+<script type="text/javascript" src= '{% static "js/js_login_signup.js" %}' />
+</body>
+</html>

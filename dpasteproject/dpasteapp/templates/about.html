@@ -1,0 +1,74 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+<html>
+    <head>
+        <title>About Devoloper</title>
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+
+    <body>
+    {% block content %}
+            <center>
+            <div>
+               <p>
+                   <img src= '{% static "images/JAY.jpg" %}' width="400px" height="450px"  align="left" style=" border-radius: 20px; margin-left: 150px "/>
+
+                   <strong style="font-size:20px;text-align:left;">
+                    Hello, Good to see you here.<br><br>
+
+                    My name is JAYANTH, developer of this dPASTE PRO website.<br>
+                    This is a replicaion of Github and dPaste websites.<br><br>
+
+
+                    If you have any problems regarding using this site or<br>
+                    if you find any bugs, you can feel free to inform<br>
+                    so that I can fix it up and could serve better.<br><br>
+
+                    you could contact through my mail,<br>
+                    Gmail: <a href="">jayanthsai1998@gmail.com</a><br>
+
+                    Or could take me on any of the following accounts..<br>
+
+                       <div class="wrapper">
+                          <a class="fa fa-3x fa-facebook-square" href="https://www.facebook.com/profile.php?id=100009813126862"
+                             style="color: #4867AA;
+                                    cursor: pointer;
+                                    text-shadow: 0px 7px 10px rgba(0, 0, 0, 0.4);
+                                    transition: all ease-in-out 150ms;">
+                          </a>&emsp;
+                           <a class="fa fa-3x fa-github-square" href="https://github.com/jayanthsai1998"
+                                style="color: #444;
+                                      cursor: pointer;
+                                      text-shadow: 0px 7px 10px rgba(0, 0, 0, 0.5);
+                                      transition: all ease-in-out 150ms;">
+                          </a>&emsp;
+                          <a class="fa fa-3x fa-twitter-square" href="https://twitter.com/jayanthsai1998"
+                               style="color: #1DA1F2;
+                                      cursor: pointer;
+                                      text-shadow: 0px 7px 10px rgba(0, 0, 0, 0.4);
+                                      transition: all ease-in-out 150ms;" >
+
+                          </a>&emsp;
+                          <a class="fa fa-3x fa-instagram" href="https://www.instagram.com/jayanthsai1998/?hl=en"
+                                style="color: #cc0099;
+                                      cursor: pointer;
+                                      text-shadow: 0px 7px 10px rgba(0, 0, 0, 0.5);
+                                      transition: all ease-in-out 150ms;">
+                          </a>&emsp;
+                           <a class="fa fa-3x fa-linkedin-square" href="https://www.linkedin.com/in/jayanth-sai-jay-7b1894121/"
+                                style="color: #0033cc;
+                                      cursor: pointer;
+                                      text-shadow: 0px 7px 10px rgba(0, 0, 0, 0.5);
+                                      transition: all ease-in-out 150ms;">
+                          </a>
+                        </div>
+
+                        Thank You... Have a Good Day.....<br>
+                    </strong>
+               <p>
+            </div>
+            </center>
+    {% endblock %}
+    </body>
+</html>
